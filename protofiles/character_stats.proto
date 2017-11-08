@@ -1,0 +1,14 @@
+syntax = 'proto3';
+package startupworld;
+
+service CharacterStats {
+	rpc GetName (NameRequest) returns (NameReply) {}
+}
+
+message NameRequest {
+	string name = 1;
+}
+
+message NameReply {
+	string message = 1;
+}

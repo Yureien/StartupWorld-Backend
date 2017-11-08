@@ -1,3 +1,5 @@
+//go:generate protoc -I ../protofiles --go_out=plugins=grpc:../protofiles ../protofiles/*.proto
+
 package main
 
 import (
@@ -22,6 +24,7 @@ func main() {
 	}
 	defer conn.Close()
 	c := pb.NewGreeterClient(conn)
+	d := pb.NewCharacterStatsClient(conn)
 
 	// Contact the server and print out its response.
 	name := defaultName
@@ -33,4 +36,9 @@ func main() {
 		log.Fatalf("could not greet: %v", err)
 	}
 	log.Printf("Greeting: %s", r.Message)
+	r2, err2 := d.GetName(context.Background(), &pb.NameRequest{Name: name})
+	if err2 != nil {
+		log.Fatalf("could not greet: %v", err2)
+	}
+	log.Printf("Greeting: %s", r2.Message)
 }
