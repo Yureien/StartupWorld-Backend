@@ -11,6 +11,26 @@ It is generated from these files:
 It has these top-level messages:
 	NameRequest
 	NameReply
+	GetMoneyReply
+	GetMoneyRequest
+	GetStaminaReply
+	GetStaminaRequest
+	GetCharismaReply
+	GetCharismaRequest
+	GetIntelligenceReply
+	GetIntelligenceRequest
+	GetEducationLevelReply
+	GetEducationLevelRequest
+	GetWorkExperienceReply
+	GetWorkExperienceRequest
+	GetAgeReply
+	GetAgeRequest
+	GetFieldReply
+	GetFieldRequest
+	GetHistoryReply
+	GetHistoryRequest
+	IsWorkingReply
+	IsWorkingRequest
 	HelloRequest
 	HelloReply
 */
@@ -68,9 +88,269 @@ func (m *NameReply) GetMessage() string {
 	return ""
 }
 
+type GetMoneyReply struct {
+	Money int64 `protobuf:"varint,1,opt,name=money" json:"money,omitempty"`
+}
+
+func (m *GetMoneyReply) Reset()                    { *m = GetMoneyReply{} }
+func (m *GetMoneyReply) String() string            { return proto.CompactTextString(m) }
+func (*GetMoneyReply) ProtoMessage()               {}
+func (*GetMoneyReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{2} }
+
+func (m *GetMoneyReply) GetMoney() int64 {
+	if m != nil {
+		return m.Money
+	}
+	return 0
+}
+
+type GetMoneyRequest struct {
+}
+
+func (m *GetMoneyRequest) Reset()                    { *m = GetMoneyRequest{} }
+func (m *GetMoneyRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetMoneyRequest) ProtoMessage()               {}
+func (*GetMoneyRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{3} }
+
+type GetStaminaReply struct {
+	Stamina uint32 `protobuf:"varint,1,opt,name=stamina" json:"stamina,omitempty"`
+}
+
+func (m *GetStaminaReply) Reset()                    { *m = GetStaminaReply{} }
+func (m *GetStaminaReply) String() string            { return proto.CompactTextString(m) }
+func (*GetStaminaReply) ProtoMessage()               {}
+func (*GetStaminaReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{4} }
+
+func (m *GetStaminaReply) GetStamina() uint32 {
+	if m != nil {
+		return m.Stamina
+	}
+	return 0
+}
+
+type GetStaminaRequest struct {
+}
+
+func (m *GetStaminaRequest) Reset()                    { *m = GetStaminaRequest{} }
+func (m *GetStaminaRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetStaminaRequest) ProtoMessage()               {}
+func (*GetStaminaRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{5} }
+
+type GetCharismaReply struct {
+	Charisma uint32 `protobuf:"varint,1,opt,name=charisma" json:"charisma,omitempty"`
+}
+
+func (m *GetCharismaReply) Reset()                    { *m = GetCharismaReply{} }
+func (m *GetCharismaReply) String() string            { return proto.CompactTextString(m) }
+func (*GetCharismaReply) ProtoMessage()               {}
+func (*GetCharismaReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{6} }
+
+func (m *GetCharismaReply) GetCharisma() uint32 {
+	if m != nil {
+		return m.Charisma
+	}
+	return 0
+}
+
+type GetCharismaRequest struct {
+}
+
+func (m *GetCharismaRequest) Reset()                    { *m = GetCharismaRequest{} }
+func (m *GetCharismaRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetCharismaRequest) ProtoMessage()               {}
+func (*GetCharismaRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{7} }
+
+type GetIntelligenceReply struct {
+	Intelligence uint32 `protobuf:"varint,1,opt,name=intelligence" json:"intelligence,omitempty"`
+}
+
+func (m *GetIntelligenceReply) Reset()                    { *m = GetIntelligenceReply{} }
+func (m *GetIntelligenceReply) String() string            { return proto.CompactTextString(m) }
+func (*GetIntelligenceReply) ProtoMessage()               {}
+func (*GetIntelligenceReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{8} }
+
+func (m *GetIntelligenceReply) GetIntelligence() uint32 {
+	if m != nil {
+		return m.Intelligence
+	}
+	return 0
+}
+
+type GetIntelligenceRequest struct {
+}
+
+func (m *GetIntelligenceRequest) Reset()                    { *m = GetIntelligenceRequest{} }
+func (m *GetIntelligenceRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetIntelligenceRequest) ProtoMessage()               {}
+func (*GetIntelligenceRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{9} }
+
+type GetEducationLevelReply struct {
+	EducationLevel string `protobuf:"bytes,1,opt,name=education_level,json=educationLevel" json:"education_level,omitempty"`
+}
+
+func (m *GetEducationLevelReply) Reset()                    { *m = GetEducationLevelReply{} }
+func (m *GetEducationLevelReply) String() string            { return proto.CompactTextString(m) }
+func (*GetEducationLevelReply) ProtoMessage()               {}
+func (*GetEducationLevelReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{10} }
+
+func (m *GetEducationLevelReply) GetEducationLevel() string {
+	if m != nil {
+		return m.EducationLevel
+	}
+	return ""
+}
+
+type GetEducationLevelRequest struct {
+}
+
+func (m *GetEducationLevelRequest) Reset()                    { *m = GetEducationLevelRequest{} }
+func (m *GetEducationLevelRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetEducationLevelRequest) ProtoMessage()               {}
+func (*GetEducationLevelRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{11} }
+
+type GetWorkExperienceReply struct {
+	WorkExperience string `protobuf:"bytes,1,opt,name=work_experience,json=workExperience" json:"work_experience,omitempty"`
+}
+
+func (m *GetWorkExperienceReply) Reset()                    { *m = GetWorkExperienceReply{} }
+func (m *GetWorkExperienceReply) String() string            { return proto.CompactTextString(m) }
+func (*GetWorkExperienceReply) ProtoMessage()               {}
+func (*GetWorkExperienceReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{12} }
+
+func (m *GetWorkExperienceReply) GetWorkExperience() string {
+	if m != nil {
+		return m.WorkExperience
+	}
+	return ""
+}
+
+type GetWorkExperienceRequest struct {
+}
+
+func (m *GetWorkExperienceRequest) Reset()                    { *m = GetWorkExperienceRequest{} }
+func (m *GetWorkExperienceRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetWorkExperienceRequest) ProtoMessage()               {}
+func (*GetWorkExperienceRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{13} }
+
+type GetAgeReply struct {
+	Reply uint32 `protobuf:"varint,1,opt,name=reply" json:"reply,omitempty"`
+}
+
+func (m *GetAgeReply) Reset()                    { *m = GetAgeReply{} }
+func (m *GetAgeReply) String() string            { return proto.CompactTextString(m) }
+func (*GetAgeReply) ProtoMessage()               {}
+func (*GetAgeReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{14} }
+
+func (m *GetAgeReply) GetReply() uint32 {
+	if m != nil {
+		return m.Reply
+	}
+	return 0
+}
+
+type GetAgeRequest struct {
+}
+
+func (m *GetAgeRequest) Reset()                    { *m = GetAgeRequest{} }
+func (m *GetAgeRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetAgeRequest) ProtoMessage()               {}
+func (*GetAgeRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{15} }
+
+type GetFieldReply struct {
+	Field string `protobuf:"bytes,1,opt,name=field" json:"field,omitempty"`
+}
+
+func (m *GetFieldReply) Reset()                    { *m = GetFieldReply{} }
+func (m *GetFieldReply) String() string            { return proto.CompactTextString(m) }
+func (*GetFieldReply) ProtoMessage()               {}
+func (*GetFieldReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{16} }
+
+func (m *GetFieldReply) GetField() string {
+	if m != nil {
+		return m.Field
+	}
+	return ""
+}
+
+type GetFieldRequest struct {
+}
+
+func (m *GetFieldRequest) Reset()                    { *m = GetFieldRequest{} }
+func (m *GetFieldRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetFieldRequest) ProtoMessage()               {}
+func (*GetFieldRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{17} }
+
+type GetHistoryReply struct {
+	History string `protobuf:"bytes,1,opt,name=history" json:"history,omitempty"`
+}
+
+func (m *GetHistoryReply) Reset()                    { *m = GetHistoryReply{} }
+func (m *GetHistoryReply) String() string            { return proto.CompactTextString(m) }
+func (*GetHistoryReply) ProtoMessage()               {}
+func (*GetHistoryReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{18} }
+
+func (m *GetHistoryReply) GetHistory() string {
+	if m != nil {
+		return m.History
+	}
+	return ""
+}
+
+type GetHistoryRequest struct {
+}
+
+func (m *GetHistoryRequest) Reset()                    { *m = GetHistoryRequest{} }
+func (m *GetHistoryRequest) String() string            { return proto.CompactTextString(m) }
+func (*GetHistoryRequest) ProtoMessage()               {}
+func (*GetHistoryRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{19} }
+
+type IsWorkingReply struct {
+	Working bool `protobuf:"varint,1,opt,name=working" json:"working,omitempty"`
+}
+
+func (m *IsWorkingReply) Reset()                    { *m = IsWorkingReply{} }
+func (m *IsWorkingReply) String() string            { return proto.CompactTextString(m) }
+func (*IsWorkingReply) ProtoMessage()               {}
+func (*IsWorkingReply) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{20} }
+
+func (m *IsWorkingReply) GetWorking() bool {
+	if m != nil {
+		return m.Working
+	}
+	return false
+}
+
+type IsWorkingRequest struct {
+}
+
+func (m *IsWorkingRequest) Reset()                    { *m = IsWorkingRequest{} }
+func (m *IsWorkingRequest) String() string            { return proto.CompactTextString(m) }
+func (*IsWorkingRequest) ProtoMessage()               {}
+func (*IsWorkingRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{21} }
+
 func init() {
 	proto.RegisterType((*NameRequest)(nil), "startupworld.NameRequest")
 	proto.RegisterType((*NameReply)(nil), "startupworld.NameReply")
+	proto.RegisterType((*GetMoneyReply)(nil), "startupworld.GetMoneyReply")
+	proto.RegisterType((*GetMoneyRequest)(nil), "startupworld.GetMoneyRequest")
+	proto.RegisterType((*GetStaminaReply)(nil), "startupworld.GetStaminaReply")
+	proto.RegisterType((*GetStaminaRequest)(nil), "startupworld.GetStaminaRequest")
+	proto.RegisterType((*GetCharismaReply)(nil), "startupworld.GetCharismaReply")
+	proto.RegisterType((*GetCharismaRequest)(nil), "startupworld.GetCharismaRequest")
+	proto.RegisterType((*GetIntelligenceReply)(nil), "startupworld.GetIntelligenceReply")
+	proto.RegisterType((*GetIntelligenceRequest)(nil), "startupworld.GetIntelligenceRequest")
+	proto.RegisterType((*GetEducationLevelReply)(nil), "startupworld.GetEducationLevelReply")
+	proto.RegisterType((*GetEducationLevelRequest)(nil), "startupworld.GetEducationLevelRequest")
+	proto.RegisterType((*GetWorkExperienceReply)(nil), "startupworld.GetWorkExperienceReply")
+	proto.RegisterType((*GetWorkExperienceRequest)(nil), "startupworld.GetWorkExperienceRequest")
+	proto.RegisterType((*GetAgeReply)(nil), "startupworld.GetAgeReply")
+	proto.RegisterType((*GetAgeRequest)(nil), "startupworld.GetAgeRequest")
+	proto.RegisterType((*GetFieldReply)(nil), "startupworld.GetFieldReply")
+	proto.RegisterType((*GetFieldRequest)(nil), "startupworld.GetFieldRequest")
+	proto.RegisterType((*GetHistoryReply)(nil), "startupworld.GetHistoryReply")
+	proto.RegisterType((*GetHistoryRequest)(nil), "startupworld.GetHistoryRequest")
+	proto.RegisterType((*IsWorkingReply)(nil), "startupworld.IsWorkingReply")
+	proto.RegisterType((*IsWorkingRequest)(nil), "startupworld.IsWorkingRequest")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -85,6 +365,16 @@ const _ = grpc.SupportPackageIsVersion4
 
 type CharacterStatsClient interface {
 	GetName(ctx context.Context, in *NameRequest, opts ...grpc.CallOption) (*NameReply, error)
+	GetMoney(ctx context.Context, in *GetMoneyRequest, opts ...grpc.CallOption) (*GetMoneyReply, error)
+	GetStamina(ctx context.Context, in *GetStaminaRequest, opts ...grpc.CallOption) (*GetStaminaReply, error)
+	GetCharisma(ctx context.Context, in *GetCharismaRequest, opts ...grpc.CallOption) (*GetCharismaReply, error)
+	GetIntelligence(ctx context.Context, in *GetIntelligenceRequest, opts ...grpc.CallOption) (*GetIntelligenceReply, error)
+	GetEducationLevel(ctx context.Context, in *GetEducationLevelRequest, opts ...grpc.CallOption) (*GetEducationLevelReply, error)
+	GetField(ctx context.Context, in *GetFieldRequest, opts ...grpc.CallOption) (*GetFieldReply, error)
+	GetWorkExperience(ctx context.Context, in *GetWorkExperienceRequest, opts ...grpc.CallOption) (*GetWorkExperienceReply, error)
+	GetAge(ctx context.Context, in *GetAgeRequest, opts ...grpc.CallOption) (*GetAgeReply, error)
+	GetHistory(ctx context.Context, in *GetHistoryRequest, opts ...grpc.CallOption) (*GetHistoryReply, error)
+	IsWorking(ctx context.Context, in *IsWorkingRequest, opts ...grpc.CallOption) (*IsWorkingReply, error)
 }
 
 type characterStatsClient struct {
@@ -104,10 +394,110 @@ func (c *characterStatsClient) GetName(ctx context.Context, in *NameRequest, opt
 	return out, nil
 }
 
+func (c *characterStatsClient) GetMoney(ctx context.Context, in *GetMoneyRequest, opts ...grpc.CallOption) (*GetMoneyReply, error) {
+	out := new(GetMoneyReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetMoney", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetStamina(ctx context.Context, in *GetStaminaRequest, opts ...grpc.CallOption) (*GetStaminaReply, error) {
+	out := new(GetStaminaReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetStamina", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetCharisma(ctx context.Context, in *GetCharismaRequest, opts ...grpc.CallOption) (*GetCharismaReply, error) {
+	out := new(GetCharismaReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetCharisma", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetIntelligence(ctx context.Context, in *GetIntelligenceRequest, opts ...grpc.CallOption) (*GetIntelligenceReply, error) {
+	out := new(GetIntelligenceReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetIntelligence", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetEducationLevel(ctx context.Context, in *GetEducationLevelRequest, opts ...grpc.CallOption) (*GetEducationLevelReply, error) {
+	out := new(GetEducationLevelReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetEducationLevel", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetField(ctx context.Context, in *GetFieldRequest, opts ...grpc.CallOption) (*GetFieldReply, error) {
+	out := new(GetFieldReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetField", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetWorkExperience(ctx context.Context, in *GetWorkExperienceRequest, opts ...grpc.CallOption) (*GetWorkExperienceReply, error) {
+	out := new(GetWorkExperienceReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetWorkExperience", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetAge(ctx context.Context, in *GetAgeRequest, opts ...grpc.CallOption) (*GetAgeReply, error) {
+	out := new(GetAgeReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetAge", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) GetHistory(ctx context.Context, in *GetHistoryRequest, opts ...grpc.CallOption) (*GetHistoryReply, error) {
+	out := new(GetHistoryReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/GetHistory", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *characterStatsClient) IsWorking(ctx context.Context, in *IsWorkingRequest, opts ...grpc.CallOption) (*IsWorkingReply, error) {
+	out := new(IsWorkingReply)
+	err := grpc.Invoke(ctx, "/startupworld.CharacterStats/IsWorking", in, out, c.cc, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for CharacterStats service
 
 type CharacterStatsServer interface {
 	GetName(context.Context, *NameRequest) (*NameReply, error)
+	GetMoney(context.Context, *GetMoneyRequest) (*GetMoneyReply, error)
+	GetStamina(context.Context, *GetStaminaRequest) (*GetStaminaReply, error)
+	GetCharisma(context.Context, *GetCharismaRequest) (*GetCharismaReply, error)
+	GetIntelligence(context.Context, *GetIntelligenceRequest) (*GetIntelligenceReply, error)
+	GetEducationLevel(context.Context, *GetEducationLevelRequest) (*GetEducationLevelReply, error)
+	GetField(context.Context, *GetFieldRequest) (*GetFieldReply, error)
+	GetWorkExperience(context.Context, *GetWorkExperienceRequest) (*GetWorkExperienceReply, error)
+	GetAge(context.Context, *GetAgeRequest) (*GetAgeReply, error)
+	GetHistory(context.Context, *GetHistoryRequest) (*GetHistoryReply, error)
+	IsWorking(context.Context, *IsWorkingRequest) (*IsWorkingReply, error)
 }
 
 func RegisterCharacterStatsServer(s *grpc.Server, srv CharacterStatsServer) {
@@ -132,6 +522,186 @@ func _CharacterStats_GetName_Handler(srv interface{}, ctx context.Context, dec f
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CharacterStats_GetMoney_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetMoneyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetMoney(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetMoney",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetMoney(ctx, req.(*GetMoneyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetStamina_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetStaminaRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetStamina(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetStamina",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetStamina(ctx, req.(*GetStaminaRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetCharisma_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetCharismaRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetCharisma(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetCharisma",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetCharisma(ctx, req.(*GetCharismaRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetIntelligence_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetIntelligenceRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetIntelligence(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetIntelligence",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetIntelligence(ctx, req.(*GetIntelligenceRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetEducationLevel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetEducationLevelRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetEducationLevel(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetEducationLevel",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetEducationLevel(ctx, req.(*GetEducationLevelRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetField_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetFieldRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetField(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetField",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetField(ctx, req.(*GetFieldRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetWorkExperience_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetWorkExperienceRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetWorkExperience(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetWorkExperience",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetWorkExperience(ctx, req.(*GetWorkExperienceRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetAge_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAgeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetAge(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetAge",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetAge(ctx, req.(*GetAgeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_GetHistory_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetHistoryRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).GetHistory(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/GetHistory",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).GetHistory(ctx, req.(*GetHistoryRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CharacterStats_IsWorking_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(IsWorkingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CharacterStatsServer).IsWorking(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/startupworld.CharacterStats/IsWorking",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CharacterStatsServer).IsWorking(ctx, req.(*IsWorkingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _CharacterStats_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "startupworld.CharacterStats",
 	HandlerType: (*CharacterStatsServer)(nil),
@@ -139,6 +709,46 @@ var _CharacterStats_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetName",
 			Handler:    _CharacterStats_GetName_Handler,
+		},
+		{
+			MethodName: "GetMoney",
+			Handler:    _CharacterStats_GetMoney_Handler,
+		},
+		{
+			MethodName: "GetStamina",
+			Handler:    _CharacterStats_GetStamina_Handler,
+		},
+		{
+			MethodName: "GetCharisma",
+			Handler:    _CharacterStats_GetCharisma_Handler,
+		},
+		{
+			MethodName: "GetIntelligence",
+			Handler:    _CharacterStats_GetIntelligence_Handler,
+		},
+		{
+			MethodName: "GetEducationLevel",
+			Handler:    _CharacterStats_GetEducationLevel_Handler,
+		},
+		{
+			MethodName: "GetField",
+			Handler:    _CharacterStats_GetField_Handler,
+		},
+		{
+			MethodName: "GetWorkExperience",
+			Handler:    _CharacterStats_GetWorkExperience_Handler,
+		},
+		{
+			MethodName: "GetAge",
+			Handler:    _CharacterStats_GetAge_Handler,
+		},
+		{
+			MethodName: "GetHistory",
+			Handler:    _CharacterStats_GetHistory_Handler,
+		},
+		{
+			MethodName: "IsWorking",
+			Handler:    _CharacterStats_IsWorking_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -148,15 +758,43 @@ var _CharacterStats_serviceDesc = grpc.ServiceDesc{
 func init() { proto.RegisterFile("character_stats.proto", fileDescriptor0) }
 
 var fileDescriptor0 = []byte{
-	// 158 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0x4d, 0xce, 0x48, 0x2c,
-	0x4a, 0x4c, 0x2e, 0x49, 0x2d, 0x8a, 0x2f, 0x2e, 0x49, 0x2c, 0x29, 0xd6, 0x2b, 0x28, 0xca, 0x2f,
-	0xc9, 0x17, 0xe2, 0x29, 0x2e, 0x49, 0x2c, 0x2a, 0x29, 0x2d, 0x28, 0xcf, 0x2f, 0xca, 0x49, 0x51,
-	0x52, 0xe4, 0xe2, 0xf6, 0x4b, 0xcc, 0x4d, 0x0d, 0x4a, 0x2d, 0x2c, 0x4d, 0x2d, 0x2e, 0x11, 0x12,
-	0xe2, 0x62, 0xc9, 0x4b, 0xcc, 0x4d, 0x95, 0x60, 0x54, 0x60, 0xd4, 0xe0, 0x0c, 0x02, 0xb3, 0x95,
-	0x54, 0xb9, 0x38, 0x21, 0x4a, 0x0a, 0x72, 0x2a, 0x85, 0x24, 0xb8, 0xd8, 0x73, 0x53, 0x8b, 0x8b,
-	0x13, 0xd3, 0x61, 0x6a, 0x60, 0x5c, 0xa3, 0x40, 0x2e, 0x3e, 0x67, 0x98, 0x85, 0xc1, 0x20, 0xfb,
-	0x84, 0xec, 0xb9, 0xd8, 0xdd, 0x53, 0x4b, 0x40, 0x7a, 0x85, 0x24, 0xf5, 0x90, 0x6d, 0xd5, 0x43,
-	0xb2, 0x52, 0x4a, 0x1c, 0x9b, 0x54, 0x41, 0x4e, 0xa5, 0x12, 0x43, 0x12, 0x1b, 0xd8, 0xc5, 0xc6,
-	0x80, 0x00, 0x00, 0x00, 0xff, 0xff, 0x35, 0xd1, 0x25, 0x24, 0xca, 0x00, 0x00, 0x00,
+	// 597 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x55, 0x4f, 0x6f, 0xd3, 0x4e,
+	0x10, 0x4d, 0xf5, 0xfb, 0xd1, 0x24, 0xd3, 0x36, 0x69, 0x97, 0x00, 0xa9, 0xa1, 0x50, 0x96, 0x96,
+	0x22, 0x90, 0x72, 0x80, 0x1b, 0x17, 0x54, 0xaa, 0x92, 0x56, 0x40, 0x25, 0xd2, 0x03, 0x27, 0x14,
+	0x2d, 0xce, 0x90, 0x58, 0xf5, 0x9f, 0xb0, 0xde, 0x10, 0xf2, 0x35, 0xf8, 0xc4, 0xc8, 0x3b, 0x6b,
+	0x67, 0x1d, 0x6f, 0xe8, 0xcd, 0x6f, 0xf6, 0xcd, 0xf3, 0x78, 0xe7, 0x3d, 0x19, 0xee, 0xf9, 0x13,
+	0x21, 0x85, 0xaf, 0x50, 0x0e, 0x53, 0x25, 0x54, 0xda, 0x9b, 0xca, 0x44, 0x25, 0x6c, 0x3b, 0x55,
+	0x42, 0xaa, 0xd9, 0x74, 0x9e, 0xc8, 0x70, 0xc4, 0x9f, 0xc2, 0xd6, 0x95, 0x88, 0x70, 0x80, 0x3f,
+	0x67, 0x98, 0x2a, 0xc6, 0xe0, 0xff, 0x58, 0x44, 0xd8, 0xdd, 0x38, 0xdc, 0x78, 0xd1, 0x1c, 0xe8,
+	0x67, 0x7e, 0x0c, 0x4d, 0xa2, 0x4c, 0xc3, 0x05, 0xeb, 0x42, 0x3d, 0xc2, 0x34, 0x15, 0xe3, 0x9c,
+	0x93, 0x43, 0x7e, 0x0c, 0x3b, 0x7d, 0x54, 0x9f, 0x93, 0x18, 0x17, 0x44, 0xed, 0xc0, 0x9d, 0x28,
+	0x43, 0x9a, 0xf8, 0xdf, 0x80, 0x00, 0xdf, 0x83, 0xf6, 0x92, 0xa6, 0x5f, 0xca, 0x5f, 0xe9, 0xd2,
+	0xb5, 0x12, 0x51, 0x10, 0x8b, 0xe2, 0x35, 0x29, 0x61, 0xdd, 0xbd, 0x33, 0xc8, 0x21, 0xbf, 0x0b,
+	0x7b, 0x36, 0x99, 0x14, 0x7a, 0xb0, 0xdb, 0x47, 0x75, 0x36, 0x11, 0x32, 0x48, 0x23, 0x23, 0xe1,
+	0x41, 0xc3, 0x37, 0x05, 0xa3, 0x51, 0x60, 0xde, 0x01, 0x56, 0xe2, 0x93, 0xca, 0x5b, 0xe8, 0xf4,
+	0x51, 0x5d, 0xc6, 0x0a, 0xc3, 0x30, 0x18, 0x63, 0xec, 0x9b, 0x6f, 0xe6, 0xb0, 0x1d, 0x58, 0x45,
+	0xa3, 0x56, 0xaa, 0xf1, 0x2e, 0xdc, 0xaf, 0xf4, 0x92, 0xea, 0xa9, 0x3e, 0x39, 0x1f, 0xcd, 0x7c,
+	0xa1, 0x82, 0x24, 0xfe, 0x84, 0xbf, 0x30, 0x24, 0xdd, 0x13, 0x68, 0x63, 0x5e, 0x1e, 0x86, 0x59,
+	0xdd, 0xdc, 0x69, 0x0b, 0x4b, 0x6c, 0xee, 0x41, 0xd7, 0x21, 0x61, 0xcb, 0x7f, 0x4d, 0xe4, 0xcd,
+	0xf9, 0xef, 0x29, 0xca, 0x60, 0x39, 0xf6, 0x09, 0xb4, 0xe7, 0x89, 0xbc, 0x19, 0x62, 0x51, 0xcf,
+	0xe5, 0xe7, 0x25, 0xb6, 0x91, 0x5f, 0x95, 0x20, 0xf9, 0x67, 0xb0, 0xd5, 0x47, 0x75, 0x3a, 0xc6,
+	0x62, 0xa7, 0x32, 0x7b, 0x30, 0x77, 0x40, 0x80, 0xb7, 0xf5, 0xea, 0x35, 0x89, 0xba, 0xc8, 0x0b,
+	0x1f, 0x02, 0x0c, 0x47, 0x45, 0xdf, 0x8f, 0x0c, 0x99, 0x09, 0x08, 0x18, 0x2f, 0x18, 0x9a, 0xed,
+	0x85, 0x8b, 0x20, 0x55, 0x89, 0x5c, 0x14, 0x5e, 0x98, 0x10, 0xce, 0x2d, 0x67, 0xa0, 0xf1, 0x42,
+	0x41, 0x26, 0x85, 0x97, 0xd0, 0xba, 0x4c, 0xb3, 0x8f, 0x09, 0xe2, 0x71, 0x21, 0x30, 0x27, 0xac,
+	0x05, 0x1a, 0x83, 0x1c, 0x72, 0x06, 0xbb, 0x16, 0x57, 0xf7, 0xbf, 0xfe, 0x53, 0x87, 0xd6, 0x59,
+	0x9e, 0x9c, 0xeb, 0x2c, 0x38, 0xec, 0x1d, 0xd4, 0xfb, 0xa8, 0xb2, 0x10, 0xb0, 0xfd, 0x9e, 0x1d,
+	0x9f, 0x9e, 0x95, 0x1d, 0xef, 0x81, 0xeb, 0x28, 0xbb, 0x9e, 0x1a, 0xbb, 0x80, 0x46, 0x6e, 0x7a,
+	0x76, 0x50, 0xa6, 0xad, 0x84, 0xc1, 0x7b, 0xb8, 0xee, 0x98, 0x94, 0xae, 0x00, 0x96, 0xf6, 0x67,
+	0x4f, 0x2a, 0xe4, 0x72, 0x30, 0xbc, 0x83, 0xf5, 0x04, 0xd2, 0xfb, 0xa2, 0xf7, 0x9b, 0x27, 0x81,
+	0x1d, 0x56, 0xf8, 0x2b, 0x21, 0xf1, 0x1e, 0xff, 0x83, 0x41, 0x92, 0xdf, 0xf4, 0x0a, 0xed, 0x28,
+	0xb0, 0xa3, 0x4a, 0x93, 0x23, 0x29, 0x1e, 0xbf, 0x85, 0x45, 0xf2, 0xbe, 0x5e, 0x7a, 0x39, 0x0c,
+	0xec, 0x79, 0xa5, 0xd5, 0x99, 0x16, 0xef, 0xe8, 0x56, 0x9e, 0xbd, 0x30, 0xed, 0x4c, 0xc7, 0xc2,
+	0x6c, 0xc7, 0x3a, 0x16, 0xb6, 0xf4, 0x7d, 0x31, 0x6e, 0x39, 0x5c, 0x8e, 0x71, 0x9d, 0xe9, 0x73,
+	0x8c, 0xeb, 0x08, 0x3a, 0xaf, 0xb1, 0xf7, 0xb0, 0x49, 0x01, 0x64, 0xd5, 0x69, 0x96, 0xb1, 0xf4,
+	0xf6, 0xdd, 0x87, 0xb6, 0xb3, 0x4c, 0x98, 0x1c, 0xce, 0x2a, 0xc7, 0xcc, 0xe1, 0x2c, 0x3b, 0xb4,
+	0xbc, 0xc6, 0x3e, 0x42, 0xb3, 0xc8, 0x16, 0x5b, 0x71, 0xcd, 0x6a, 0xe8, 0xbc, 0x47, 0x6b, 0xcf,
+	0xb5, 0xd8, 0xf7, 0x4d, 0xfd, 0xef, 0x7a, 0xf3, 0x37, 0x00, 0x00, 0xff, 0xff, 0xa3, 0xd6, 0x0a,
+	0xc3, 0xd4, 0x06, 0x00, 0x00,
 }

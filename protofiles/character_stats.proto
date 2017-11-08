@@ -3,6 +3,16 @@ package startupworld;
 
 service CharacterStats {
 	rpc GetName (NameRequest) returns (NameReply) {}
+	rpc GetMoney (GetMoneyRequest) returns (GetMoneyReply) {}
+	rpc GetStamina (GetStaminaRequest) returns (GetStaminaReply) {}
+	rpc GetCharisma (GetCharismaRequest) returns (GetCharismaReply) {}
+	rpc GetIntelligence (GetIntelligenceRequest) returns (GetIntelligenceReply) {}
+	rpc GetEducationLevel (GetEducationLevelRequest) returns (GetEducationLevelReply) {}
+	rpc GetField (GetFieldRequest) returns (GetFieldReply) {}
+	rpc GetWorkExperience (GetWorkExperienceRequest) returns (GetWorkExperienceReply) {}
+	rpc GetAge (GetAgeRequest) returns (GetAgeReply) {}
+	rpc GetHistory (GetHistoryRequest) returns (GetHistoryReply) {}
+	rpc IsWorking (IsWorkingRequest) returns (IsWorkingReply) {}
 }
 
 message NameRequest {
@@ -12,3 +22,63 @@ message NameRequest {
 message NameReply {
 	string message = 1;
 }
+
+message GetMoneyReply {
+	int64 money = 1;
+}
+
+message GetMoneyRequest {}
+
+message GetStaminaReply {
+	uint32 stamina = 1;
+}
+
+message GetStaminaRequest {}
+
+message GetCharismaReply {
+	uint32 charisma = 1;
+}
+
+message GetCharismaRequest {}
+
+message GetIntelligenceReply {
+	uint32 intelligence = 1;
+}
+
+message GetIntelligenceRequest {}
+
+message GetEducationLevelReply {
+	string education_level = 1;
+}
+
+message GetEducationLevelRequest {}
+
+message GetWorkExperienceReply {
+	string work_experience = 1;
+}
+
+message GetWorkExperienceRequest {}
+
+message GetAgeReply {
+	uint32 reply = 1;
+}
+
+message GetAgeRequest {}
+
+message GetFieldReply {
+	string field = 1;
+}
+
+message GetFieldRequest {}
+
+message GetHistoryReply {
+	string history = 1;
+}
+
+message GetHistoryRequest {}
+
+message IsWorkingReply {
+	bool working = 1;
+}
+
+message IsWorkingRequest {}
